@@ -31,7 +31,7 @@
 
 		    <ul>
 
-		    	<li><a href="index.html">Inicio</a></li>
+		    	<li><canvas id="sobreMi" width="50" height="50" style="border:1px solid black;"> </canvas><a href="index.html">Inicio</a></li>
 
 		    	<li><a href="noticias.html">Noticias</a></li>
 
@@ -169,3 +169,27 @@
 
 
 </html>
+
+<script type="text/javascript">
+	var micolor = "Red";
+	var escala = 0.5;
+
+	var c=document.getElementById("sobreMi");
+
+	var cxt=c.getContext("2d");
+
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*25,escala*20,0, Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*90,escala*40, Math.PI, Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+
+	</script>
