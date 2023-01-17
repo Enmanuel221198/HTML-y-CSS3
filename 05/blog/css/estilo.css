@@ -210,6 +210,7 @@ article{
 
 width:55%;
 /*background:white;*/
+background: rgba(255, 255, 255, 0);
 margin: 10px;
 height: 100%;
 display: table;
@@ -218,7 +219,20 @@ border: 1px solid white;
 box-shadow: 3px 3px 10px black;
 -webkit-box-shadow: 3px 3px 10px black;
 padding: 10px 10px 10px 150px;
+opacity: 0.5;
+transition: opacity 1s, box-shadow 1s, transform 1s, background 1s;
+-webkit-transition: opacity 1s, -webkit-box-shadow 1s, -webkit-transform 1s,  background 1s;
+transform:scale(1,1);
+-webkit-transform:scale(1,1);
 }
+	article:hover{
+
+		opacity: 1;
+		transform:scale(1.1,1.1);
+		transform:scale(1.1,1.1);
+		background: rgba(255, 255, 255, 0.5);
+
+	}
 
 time{
 
@@ -239,12 +253,13 @@ aside{
 float:right;
 display:inline-table;
 width:20%;
-background:white;
 margin: 10px;
 padding: 10px;
 border: 1px solid white;
 border-radius: 0px 25px 0px 25px;
+-webkit-border-radius: 0px 25px 0px 25px;
 box-shadow: 3px 3px 10px black;
+-webkit-box-shadow: 3px 3px 10px black;
 }
 
 aside ul{
@@ -258,7 +273,7 @@ float: left;
 font-family: Ubuntu-Bold;
 font-size: 10px;
 text-decoration:none;
-list-style:none
+list-style:none;
 }
 
 
@@ -324,4 +339,121 @@ border-radius: 0px 10px 0px 10px;
 box-shadow: 0px 0px 10px white;
 -webkit-border-radius: 0px 10px 0px 10px;
 -webkit-box-shadow: 0px 0px 10px white;
+animation: parpadeo 5s;
+-webkit-animation: parpadeo 5s;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+
+@Keyframes parpadeo{
+
+0% {box-shadow: 0px 0px 10px white;}
+50% {box-shadow: 0px 0px 50px white;}
+100% {box-shadow: 0px 0px 10px white;}
+
+}
+
+@-webkit-keyframes parpadeo{
+
+0% {-webkit-box-shadow: 0px 0px 10px white;}
+50% {-webkit-box-shadow: 0px 0px 50px white;}
+100% {-webkit-box-shadow: 0px 0px 10px white;}
+
+}
+
+#logoblender{
+
+
+width: 100px;
+height: 100px;
+font-family: Ubuntu-Bold;
+font-size: 20px;
+color: white;
+text-align: left;
+
+background:url('../photo/blender.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+border 1px solid white;
+border-radius: 0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius: 0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+position: absolute;
+transform: translate(-140px, 0px);
+-webkit-transform: translate(-140px, 0px);
+}
+
+#logoactualidad3d{
+
+
+width: 100px;
+height: 100px;
+font-family: Ubuntu-Bold;
+font-size: 20px;
+color: white;
+text-align: left;
+
+background:url('../photo/actualidad.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+border 1px solid white;
+border-radius: 0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius: 0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+position: absolute;
+transform: translate(-140px, 0px);
+-webkit-transform: translate(-140px, 0px);
+}
+
+#logov2b{
+
+
+width: 100px;
+height: 100px;
+font-family: Ubuntu-Bold;
+font-size: 20px;
+color: white;
+text-align: left;
+
+background:url('../photo/video.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+border 1px solid white;
+border-radius: 0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius: 0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+
+position: absolute;
+transform: translate(-140px, 0px);
+-webkit-transform: translate(-140px, 0px);
+}
+
+#mifotoarticulo{
+
+
+width: 100px;
+height: 100px;
+font-family: Ubuntu-Bold;
+font-size: 20px;
+color: white;
+text-align: left;
+
+background:url('../photo/Musica.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+border 1px solid white;
+border-radius: 0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius: 0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+position: absolute;
+transform: translate(-140px, 0px);
+-webkit-transform: translate(-140px, 0px);
 }
