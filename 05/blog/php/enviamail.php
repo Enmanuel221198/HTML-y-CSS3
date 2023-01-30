@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -5,7 +7,7 @@
  <head manifest="/manifiesto/manifiesto.cache">
  	<title>WebLog de Juan Carlos</title>
    <meta name="description" content="WebLog, blog, Juan Carlos, diseño, multimedia" />
-   <link rel=stylesheet href="css/estilo.css" type="text/css" />
+   <link rel=stylesheet href="../css/estilo.css" type="text/css" />
  </head>
 
 
@@ -49,47 +51,50 @@
 
 		</header>
 		<div id="contenido">
-			<form action="php/enviamail.php" method="post"> 
+			<?php
 
-				<table border=1><form>
-					<tr>
-
-						<td><p style="text-align:right">Introduce to nombre</p></td>
-						<td> <input type="text" width=100% required name="nombre" /> </td>
+//recibo las variables de formulario
 
 
-					</tr>
-			
-					<tr>
+$nombre = $_POST['nombre'];
+$mail = $_POST['email'];
+$mensaje = $_POST['mensaje'];
 
-						<td><p style="text-align:right">Introduce tu correo electronico</p></td>
+//Te muestro las variables
 
-						<td><input type="email" width=100% value="usuario@domonio.com" name="email"> </td>
-
-
-					</tr>
-
-					<tr>
-							
-
-								<td><p style="text-align:right">Escribe un mensaje</p></td>
-
-								<td>
-									<textarea cols=40 rows="6"></textarea>
-
-								</td>
-
-								<td>
-								<input type="submit" value="Enviar" name="mensaje">
-								</td>	
-
-							<td>
-
-					</tr>
+echo "<h3>El mensaje que has enviado es:</h3>";
+echo "<br />";
+echo "<p>Nombre: ";
+echo $nombre;
+echo "<br />";
+echo "Email: ";
+echo $mail;
+echo "<br />";
+echo "Mensaje:";
+echo $mensaje;
+echo "</p>";
 
 
-			</form>
+//Envio un Email
+/*
+$aquien = "info@jocarsa.com";
+$asunto ="Has Recibido un correo del Blog";
+$mensajemail = $nombre. " Con el email ".$mail."Te ha enviado un mensaje que dice: " .$mensaje;
+if (mail($aquien,$asunto,$mensaje)) {
 
+echo "Tu email se ha enviado correctamente";
+
+}else{
+
+echo "El envio del mail ha fallado";
+
+
+}
+*/
+
+
+
+?>
 		</div>
 		
 	     <footer>
