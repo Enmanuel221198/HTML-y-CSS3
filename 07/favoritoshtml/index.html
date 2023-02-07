@@ -5,8 +5,105 @@
 	<head> 
 	<meta http-equiv="refresh" content="5">
 	<style type="text/css">
+		@font-face{
 
+			font-family:ubuntuRegular;
+			src: url(ttf/Ubuntu-Regular.ttf) format('truetype');
 
+		}
+
+		@font-face{
+
+			font-family:ubuntuItalic;
+			src: url(ttf/Ubuntu-MediumItalic.ttf) format('truetype');
+
+		}
+
+		@font-face{
+
+			font-family:ubuntuBoldItalic;
+			src: url(ttf/Ubuntu-BoldItalic.ttf) format('truetype');
+
+		}
+
+		@font-face{
+
+			font-family:ubuntuBold;
+			src: url(ttf/Ubuntu-Bold.ttf) format('truetype');
+
+		}
+		body{
+			font-family: ubuntuRegular; 
+			margin:auto;
+			padding:0px;
+							}
+		#contenedor{
+
+			margin:auto;
+			width:80%;
+			border: 1px solid black;
+			box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+			-webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+			-mozilla-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+			-o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+			border-radius: 15px;
+		}
+
+		header{ background: rgba(255, 0, 0, 0.1);
+		height: 200px;
+		}
+
+		#contenido{
+			background: rgba(0, 255, 0, 0.1);
+
+		}
+		#presentacion{
+			background: rgba(0, 0, 0, 0.2);
+
+		}
+
+		#etiquetas{
+			background: rgba(0, 0, 0, 0.1);
+
+		}
+		footer{
+			background: rgba(0, 0, 255, 0.1);
+
+		}
+		#logotipo{
+		font-size: 0px;
+		float: left;
+		position:absolute;
+		margin: 0px;
+		padding: 0px;
+
+		}
+
+		#tipo{
+
+		position:absolute;
+		padding:0px;
+		margin: 0px;
+		font-size:48px;
+		color: rgba(255, 255, 255, 1);
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		font-family:ubuntuItalic;
+		transform: translate(150px,0px);
+		-webkit-transform: translate(150px,0px);
+		-moz-transform: translate(150px,0px);
+		-o-transform: translate(150px,0px);
+		}
+		#logo{
+
+			float:left;
+			width:50%;
+			text-align:center;
+			height:100%;
+			vertical-align:middle;
+			position: absolute;
+			padding:0px;
+			margin:0px;
+		}
 
 	</style>
 
@@ -18,8 +115,20 @@
 	<div id="contenedor">
 		<header>
 			<section id="logotipo">
-			Logotipo
-			<h1>misFavoritos</h1>
+				<div id="logo">
+						 <svg height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+			 viewBox="0 0 47.94 47.94" xml:space="preserve">
+		<path style="fill:#ED8A19;" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757
+			c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042
+			c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685
+			c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528
+			c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956
+			C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+		</svg>
+				</div>
+				<div id="tipo">
+					<h1>misFavoritos</h1>
+				</div>
 			</section>
 			<section id="login">
 		<form>
