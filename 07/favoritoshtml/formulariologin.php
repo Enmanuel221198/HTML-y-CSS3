@@ -30,11 +30,11 @@
 				</div>
 			</section>
 			<section id="login">
-		<form>
+		<form action="login.php" method="post">
 
 		<input type="text" name="usuario" value="usuario" size="20">	
 
-		<input type="text" name="contrasena" value="contrase�a" size="20">
+		<input type="text" name="contrasena" value="contraseña" size="20">
 
 		<input type="submit">
 
@@ -293,3 +293,64 @@
 
 
 </html>
+
+<!--VIEJO CODIGO#########################################-->
+
+<html>
+
+<body>
+
+	<table border=1 width=100%>
+
+	<tr>
+
+	<td>
+
+	<form action="login.php" method="post">
+
+	<input type="text" name="usuario" value="Introduce aqui tu nombre" width=50%></td>
+
+	</tr>
+
+	<tr>
+
+	<td>
+
+	<input type="text" name="contrasena" value="Introduce aqui tu contraseña" width="50%"></td>
+
+    </tr>
+
+
+    <tr>
+
+    <td> 
+
+    <input type="submit"></td>
+
+    </tr>
+
+
+   </form>
+
+   </table>
+
+   No eres usuario todavia? Pues Pulsa <a href="formularioaltausuario.php">AQUI</a>
+
+
+</body>
+
+</html>
+
+
+<?php
+
+
+ echo"Algunos Links que quizas te puedan interesar";
+
+ $conexion = sqlite_open('favoritos.db');
+
+ $consulta =SELECT * FROM favoritos ORDER BY RANDOM();
+
+ $resultado = sqlite_query($conexion, $consulta);
+
+ echo ""
